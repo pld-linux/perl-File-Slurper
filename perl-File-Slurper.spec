@@ -6,6 +6,7 @@
 %define		pnam	Slurper
 %include	/usr/lib/rpm/macros.perl
 Summary:	File::Slurper - A simple, sane and efficient module to slurp a file
+Summary(pl.UTF-8):	File::Slurper - prosty, rozsądny, wydajny moduł do wciągania pliku
 Name:		perl-File-Slurper
 Version:	0.008
 Release:	1
@@ -23,6 +24,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This module provides functions for fast and correct slurping and
 spewing. All functions are optionally exported.
+
+%description -l pl.UTF-8
+Ten moduł udostępnia funkcje do szybkiego i poprawnego wciągania i
+wypluwania. Wszystkie funkcje są eksportowane opcjonalnie.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
