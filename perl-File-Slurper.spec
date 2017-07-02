@@ -8,16 +8,20 @@
 Summary:	File::Slurper - A simple, sane and efficient module to slurp a file
 Summary(pl.UTF-8):	File::Slurper - prosty, rozsądny, wydajny moduł do wciągania pliku
 Name:		perl-File-Slurper
-Version:	0.008
+Version:	0.009
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	6e4f8ab76e38dc3f3fec6a0f575bf132
+# Source0-md5:	b4ffcb66095aebbcd6df03de7befda13
 URL:		http://search.cpan.org/dist/File-Slurper/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl-Test-Simple
+BuildRequires:	perl-Test-Warnings
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,6 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes INSTALL README
+%doc Changes README
 %{perl_vendorlib}/File/Slurper.pm
 %{_mandir}/man3/File::Slurper.3pm*
