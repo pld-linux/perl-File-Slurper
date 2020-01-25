@@ -4,7 +4,6 @@
 
 %define		pdir	File
 %define		pnam	Slurper
-%include	/usr/lib/rpm/macros.perl
 Summary:	File::Slurper - A simple, sane and efficient module to slurp a file
 Summary(pl.UTF-8):	File::Slurper - prosty, rozsądny, wydajny moduł do wciągania pliku
 Name:		perl-File-Slurper
